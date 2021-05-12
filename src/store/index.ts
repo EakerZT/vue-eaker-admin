@@ -1,9 +1,20 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+interface State {
+  menuCollapsed:boolean
+}
+
+export default createStore<State>({
   state: {
+    menuCollapsed: false
   },
   mutations: {
+    foldMenu (state) {
+      state.menuCollapsed = true
+    },
+    unfoldMenu (state) {
+      state.menuCollapsed = false
+    }
   },
   actions: {
   },
