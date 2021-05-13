@@ -2,7 +2,7 @@
     <a-tooltip>
       <template #title>{{ $props.tooltip }}</template>
       <div v-bind="$attrs" class="icon-button">
-        <antd-icon :icon="$props.icon" />
+        <remix-icon :icon="$props.icon" />
       </div>
     </a-tooltip>
 </template>
@@ -10,10 +10,11 @@
 <script>
 import { defineComponent } from 'vue'
 import AntdIcon from '@/components/AntdIcon'
+import RemixIcon from '@/components/RemixIcon'
 
 export default defineComponent({
   name: 'IconButton',
-  components: { AntdIcon },
+  components: { RemixIcon, AntdIcon },
   inheritAttrs: false,
   props: {
     tooltip: {

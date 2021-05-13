@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-sider :collapsed="menuCollapsed" :trigger="null" collapsible>
+    <a-layout-sider :collapsed="menuCollapsed" :trigger="null" collapsible width="256px">
       <Menu class="left-pane"/>
     </a-layout-sider>
     <a-layout>

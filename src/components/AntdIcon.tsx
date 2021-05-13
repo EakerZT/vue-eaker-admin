@@ -11,7 +11,6 @@ export default defineComponent({
     }
   },
   setup (props) {
-    console.log(ANTDIcon)
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const e = () => createVNode(ANTDIcon[props.icon])

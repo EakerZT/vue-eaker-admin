@@ -5,6 +5,7 @@ import store from './store'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import * as ANTDIcon from '@ant-design/icons-vue'
+import 'remixicon/fonts/remixicon.css'
 
 const app = createApp(App).use(store).use(router).use(Antd)
 const icons: any = ANTDIcon
