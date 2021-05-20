@@ -9,12 +9,11 @@
 
 <script>
 import { defineComponent } from 'vue'
-import AntdIcon from '@/components/AntdIcon'
 import RemixIcon from '@/components/RemixIcon'
 
 export default defineComponent({
   name: 'IconButton',
-  components: { RemixIcon, AntdIcon },
+  components: { RemixIcon },
   inheritAttrs: false,
   props: {
     tooltip: {
