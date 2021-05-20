@@ -10,6 +10,7 @@ export default defineComponent({
       required: true
     }
   },
+  components: { ...ANTDIcon },
   setup (props) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore

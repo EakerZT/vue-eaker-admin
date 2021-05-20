@@ -1,12 +1,15 @@
 <template>
   <a-layout>
     <a-layout-sider :collapsed="menuCollapsed" :trigger="null" collapsible width="256px">
-      <Menu class="left-pane"/>
+      <Menu />
     </a-layout-sider>
     <a-layout>
       <a-layout-header style="background: #fff; padding: 0">
         <Header/>
       </a-layout-header>
+      <a-layout-content>
+        <router-view/>
+      </a-layout-content>
     </a-layout>
   </a-layout>
 </template>

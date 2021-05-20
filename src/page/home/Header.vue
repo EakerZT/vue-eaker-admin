@@ -15,7 +15,6 @@
       <template v-else>
         <icon-button tooltip="进入全屏" icon="ri-fullscreen-line" @click="toggle"/>
       </template>
-      <remix-icon/>
     </div>
   </div>
 </template>
@@ -25,21 +24,18 @@ import { defineComponent, computed, ref } from 'vue'
 import { useStore } from 'vuex'
 import IconButton from '@/components/IconButton'
 import screenfull from 'screenfull'
-import RemixIcon from '@/components/RemixIcon'
 
 export default defineComponent({
   name: 'Header',
-  components: { RemixIcon, IconButton },
+  components: { IconButton },
   setup () {
     const store = useStore()
     const foldMenu = () => store.commit('foldMenu')
     const unfoldMenu = () => store.commit('unfoldMenu')
     const menuCollapsed = computed(() => store.state.menuCollapsed)
     const fullscreen = ref(false)
-    document.addEventListener('fullscreenchange', () => fullscreen.value = !!document.fullscreenElement)
-    const toggle = () => {
-      screenfull.toggle()
-    }
+    document.addEventListener('fullscreenchange', () => { fullscreen.value = !!document.fullscreenElement })
+    const toggle = () => { screenfull.toggle() }
     return {
       foldMenu,
       unfoldMenu,

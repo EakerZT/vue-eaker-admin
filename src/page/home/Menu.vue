@@ -10,11 +10,11 @@
   <a-menu
     mode="inline"
     theme="dark"
-    style="height: 100vh"
+    style="height: calc(100vh - 60px)"
     v-model:selectedKeys="selectedKeys">
     <a-menu-item key="menu1">
       <remix-icon icon="ri-apps-line" class="anticon"/>
-      <span>菜单项</span>
+      <span>首页</span>
     </a-menu-item>
     <a-menu-item key="menu2">
       <remix-icon icon="ri-apps-line" class="anticon"/>
@@ -26,6 +26,7 @@
 <script>
 import { computed, defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 import RemixIcon from '@/components/RemixIcon'
 
 export default defineComponent({
@@ -35,6 +36,8 @@ export default defineComponent({
     const store = useStore()
     const menuCollapsed = computed(() => store.state.menuCollapsed)
     const selectedKeys = ref([])
+    const router = useRouter()
+    console.log(router.getRoutes())
     return {
       selectedKeys,
       menuCollapsed
